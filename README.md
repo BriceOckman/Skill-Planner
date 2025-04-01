@@ -37,9 +37,33 @@ The primary users are undergraduate students who want a more efficient way to pl
 ## Technical Requirements
 
 ### Stack
-- Backend: Python (Flask), SQLAlchemy ORM
-- Database: MySQL
-- Frontend: HTML5, JavaScript, CSS (Tailwind CSS)
+- **Backend**
+  - Python
+  - Flask
+  - SQLAlchemy ORM
+- **Database**
+  - MySQL
+- **Frontend**
+  - HTML5
+  - JavaScript
+  - CSS with Tailwind
+
+### Project Structure
+```
+/app
+  /models
+    course.py      # Course data model and relationships
+    user.py        # User authentication and profile management
+    degree.py      # Degree requirements and planning logic
+  /routes
+    auth.py        # Authentication routes (login, register, etc.)
+    courses.py     # Course browsing and management
+    planner.py     # Degree planning and semester management
+  /static          # Static assets (CSS, JS, images)
+  /templates       # HTML templates
+  config.py        # Application configuration
+  extensions.py    # Flask extensions (SQLAlchemy, LoginManager)
+```
 
 ### Core Functionalities
 - User authentication (Flask-Login or Flask-JWT)
